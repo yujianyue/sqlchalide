@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>查立得PHP+mysql通用已有数据表查询系统19查搜模式合1 V2.0</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+font-size: 16px;
+color: #333;
+margin: 30px auto;
+width: 60%;
+min-width: 300px;
+}
+span{color:green;}
+b{color:red;}
+p{margin: 0,padding: 0;line-height: 1.2;}
+.tabs {
+display: flex;
+justify-content: left;
+align-items: left;
+margin: 0 10px;
+padding: 0px;
+}
+
+.tab {
+margin-right: 10px;
+cursor: pointer;
+padding: 6px 12px;
+border-radius: 5px 5px 0 0;
+background-color: #FFF;
+color: black;
+border: 1px solid #CCC;
+}
+
+.tab.active {
+background-color: #007AFF;
+color: white;
+}
+
+.tab-content {
+display: none;
+margin: 0 2px;
+padding: 12px;
+background-color: #FFF;
+border: 1px solid #CCC;
+border-radius: 5px;
+}
+
+.tab-content.active {
+display: block;
+}
+</style>
+</head>
+<body>
+<div class="tabs">
+<div class="tab active" data-tab="tab1">代码简介</div>
+<div class="tab" data-tab="tab6">查询模式</div>
+<div class="tab" data-tab="tab2">使用步骤</div>
+<div class="tab" data-tab="tab3">经验技巧</div>
+<div class="tab" data-tab="tab4">特殊字段处理</div>
+<div class="tab" data-tab="tab5">联系我们</div>
+</div>
+
+<div class="tab-content active" data-tab="tab1">
+<h2>代码简介</h2>
+<h3>查立得PHP+mysql通用已有数据表查询系统19查搜模式合1 V2.0</h3>
+<p>推荐环境: 宝塔/护卫神/主流虚拟主机 PHP5.4-7.3/mysql5.6环境</p>
+<p>一般网站站长/程序员/计算机熟练者自用,快速用于<b>已有数据表的查询搜索</b>。</p>
+<p>单文件实现19查搜模式,每个模式均通用Mysql单表(灵活字段和查询条件)。</p>
+<p>可以多输入框都数对,一个输入框查多列,选择条件之一查单列,多输入框输过的都符合...</p>
+<p>支持等于/包含/开头/结尾/空格分开多关键词。可自定义验证码和网页主色。</p>
+<p>支持隐藏指定多列;支持查询结果指定字段排序;支持分页与页码设置;支持最大页数限定。</p>
+<p>支持字段别名设置;极小页面让你低带宽实现高并发;代码量极小方便二开与安全分析。</p>
+<p><b>禁止将本系统用于非法目的!请尊重劳动成果:禁止分享和出售!</b></p>
+</div>
+
+<div class="tab-content" data-tab="tab6">
+<h2>查询模式 19选一</h2>
+<p>$ztai=0关闭查询</p>
+<p>$ztai=1单输入框查多字段等于;</p>
+<p>$ztai=2单输入框查多字段包含;</p>
+<p>$ztai=3单输入框查多字段开头;</p>
+<p>$ztai=4单输入框查多字段结尾;</p>
+<p>$ztai=5单输入框查多字段空格分开多关键词包含;</p>
+
+<p>$ztai=6多输入框查多字段都输对;<b>万用查分</b></p>
+
+<p>$ztai=11单输入框多条件选一等于;</p>
+<p>$ztai=12单输入框多条件选一包含;</p>
+<p>$ztai=13单输入框多条件选一开头;</p>
+<p>$ztai=14单输入框多条件选一结尾;</p>
+<p>$ztai=15单输入框多条件选一多空格分开关键词包含;</p>
+
+<p>$ztai=21单输入框查多字段等于2;</p>
+<p>$ztai=22单输入框查多字段包含2;</p>
+<p>$ztai=23单输入框查多字段开头2;</p>
+<p>$ztai=24单输入框查多字段结尾2;</p>
+  <p>$ztai=25单输入框查多字段空格分开多关键词都包含;</p>
+
+
+<p>$ztai=31多输入框查对应字段输过的都等于;</p>
+<p>$ztai=32多输入框查对应字段输过的都包含;</p>
+<p>$ztai=33多输入框查对应字段输过的都开头;</p>
+<p>$ztai=34多输入框查对应字段输过的都结尾;</p>
+<p>$ztai=36多输入框都输对(不区分大小写);</p>
+</div>
+
+<div class="tab-content" data-tab="tab2">
+<h2>使用步骤</h2>
+<p>准备:已绑定域名的php网站空间(5.4-7.3)+Mysql5.6数据</p>
+
+<p>第1步：上传代码</p>
+<p>用你的方式保持原有结构将代码上传到新创建的英文字母组成的名称的文件夹(比如soulide)下；</p>
+<p>上传方式：FTP,宝塔面板在线上传,在线文件管理面板,远程桌面等；</p>
+<p>访问测试：访问绑定的域名+文件夹,参考格式：http://96448.cn/soulide/；</p>
+
+<p>第2步：修改参数</p>
+<p>在线编辑数据:(宝塔等在线工具)修改 index.php 参数;也可本地修改(别用记事本修改)后上传替换。</p>
+<p>默认打开报错信息方便查找原因；自己可以根据报错信息百度到原因。正式使用可以关闭报错信息。</p>
+
+<p>第3步：查询测试</p>
+<p>查询测试第一条、最后一条数据；再抽查多条其他条数据。</p>
+<p>其他特殊情况查询测试:比如大小写、首尾有空格的等。</p>
+</div>
+
+<div class="tab-content" data-tab="tab3">
+<h2>经验技巧</h2>
+
+<p>使用要点：</p>
+<p>1. 查询条件:推荐设置2-3个，唯一对应用户的字段(比如学号、工号、学籍号)+验证字段(名字、生日等)!</p>
+<p>2. 必要原则:不上传非必要字段,比如查询成绩就无需上传身份证号信息,如果是查询条件可以设置隐藏列!</p>
+<p>3. 数据意识:(参考access,mysql等二维结构表)Excel首行字段即列标题，以后一行一条数据。</p>
+<p>4. 严谨:字段设置和数据库一致；设置的参数尽量不要有符号特别是回车换行单引号双引号等。</p>
+<p>5. 性能优化:精准查询可以查询条件字段做索引;开启opcache缓存!</p>
+<p>6. 尚未有数据表(自己有导入数据能力)：自己可以用自己的方式导入数据再使用本系统!</p>
+</div>
+
+<div class="tab-content" data-tab="tab4">
+<h2>特殊字段处理</h2>
+<p>1. 隐藏列:搜索代码文件“隐藏列:”,字段存在则生效,多字段+隔开!</p>
+<p>2. 拨号链接:单元格为tel:开头的手机号，则自动加拨号链接!</p>
+<p>3. 图片链接:单元格img:开头的http/https开头的网址，则显示为图片!</p>
+<p>4. 网址链接:http://或https://开头的单元格自动加链接!</p>
+<p>5. 按值隐藏:表格习惯-或/、按数据库习惯Null值字段将隐藏!</p>
+<p>6. 无合并单元格:请先拆分合并后填充数据,不然只有第一格有内容其他格为空！</p>
+</div>
+
+<div class="tab-content" data-tab="tab5">
+<h2>联系我们</h2>
+<p>作者信息：15058593138@qq.com 其中的手机号同微信号</p>
+<p>沟通技巧：问题反馈免费,付费技术支持。注意截图现象；或者部署公网网址我们调试。</p>
+
+<h2>无偿赞助</h2>
+<p>微信或支付宝均可手机号打款：15058593138</p>
+<p></p>
+</div>
+
+<script>
+const tabs = document.querySelectorAll('.tab');
+const tabContents = document.querySelectorAll('.tab-content');
+tabs.forEach(tab => {
+tab.addEventListener('click', () => {
+const activeTab = document.querySelector('.tab.active');
+const activeTabContent = document.querySelector('.tab-content.active');
+activeTab.classList.remove('active');
+activeTabContent.classList.remove('active');
+tab.classList.add('active');
+const tabContent = document.querySelector(`.tab-content[data-tab=${tab.dataset.tab}]`);
+tabContent.classList.add('active');
+});
+});
+</script>
+</body>
+</html>
